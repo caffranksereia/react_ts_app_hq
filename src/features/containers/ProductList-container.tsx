@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import apiMarvel from '../../config/http';
 import CharactersInterface from '../../classes/interface/Characters-interface';
-import { ContainerImag } from '../../_assets/img-styled';
-import { ContainerInfo } from '../../_assets/form-styled';
+import { ContainerImag, Imag } from '../../_assets/img-styled';
 import {ContainerGrid} from '../../_assets/containerGrid-styled';
-import ButtonComponents from '../../components/button/Button';
+import {Button, Component } from '../../_assets/button-styled';
+import { ContainerInfo } from '../../_assets/form-styled';
 export default function ProductList() {
   const [characters, setCharacters] = useState<CharactersInterface[]>([]);
 
@@ -24,17 +24,22 @@ export default function ProductList() {
 
   return (
   <ContainerGrid>
-    <ButtonComponents/>
-         {characters.map(
+          {characters.map(
           character => {
             return(
                <p key={character.id}>
 
-                <ContainerImag src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={`foto do ${character.name}`}  />
-                  <ButtonComponents/>
-                {/* <ContainerInfo>
-                  <p>Descricao:</p> {character.description}
-                </ContainerInfo> */}
+                <ContainerImag>
+                    <Imag src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={`foto do ${character.name}`}  />
+
+        <ContainerInfo>
+            <p>{character.description}</p>
+        </ContainerInfo>
+          <Component>
+         <Button> Comprar</Button>
+      </Component>
+    </ContainerImag>
+
                   </p>
                 );
               })}
