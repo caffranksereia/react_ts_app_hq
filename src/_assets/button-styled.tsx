@@ -1,16 +1,17 @@
 import styled from 'styled-components'
 
 export const Button = styled.button`
-width: 50px
-height: 50px;
-  background: palevioletred;
+ color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
   border-radius: 3px;
-  border: none;
-  color: white;
 `;
 
 export const TomatoButton = styled(Button)`
-  background: tomato;
+   color: tomato;
+  border-color: tomato;
 `;
 export const Component = styled.div`
 width: 50px

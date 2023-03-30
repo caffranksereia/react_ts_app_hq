@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerInfo = styled.div`
-height: 400px;
+height: 250px;
 width: 50%;
 paddin:4em;
 margin-top:80px;
