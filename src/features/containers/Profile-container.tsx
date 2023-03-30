@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Img from '../../components/img/Img';
-import Form from '../../components/form/Form';
 import { Container } from '../../_assets/container-styled';
 import { ContainerImag } from '../../_assets/img-styled';
 import apiMarvel from '../../config/http';
